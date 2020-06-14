@@ -1,0 +1,6 @@
+spring.datasource.url: jdbc:postgresql://localhost:5432/chat
+spring.datasource.username: root
+spring.datasource.password: testtest
+spring.jpa.hibernate.ddl-auto: none
+someParameter:
+  value: 5463
