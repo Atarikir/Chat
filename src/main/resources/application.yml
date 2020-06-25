@@ -1,6 +1,19 @@
-spring.datasource.url: jdbc:postgresql://localhost:5432/chat
-spring.datasource.username: root
-spring.datasource.password: testtest
-spring.jpa.hibernate.ddl-auto: none
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/chat
+    username: root
+    password: testtest
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL95Dialect
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    url: jdbc:postgresql://localhost:5432/chat
+    username: root
+    password: testtest
+    locations: classpath:migration
+    baseline-on-migrate: true
 someParameter:
   value: 5463
